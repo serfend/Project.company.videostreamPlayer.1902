@@ -1,6 +1,6 @@
-﻿namespace SfPlayer
+﻿namespace Inst
 {
-	partial class FrmMain
+	partial class InfoShower
 	{
 		/// <summary>
 		/// Required designer variable.
@@ -28,17 +28,21 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
 			this.SuspendLayout();
 			// 
-			// FrmMain
+			// InfoShower
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(799, 554);
-			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-			this.Name = "FrmMain";
-			this.Text = "FrmMain";
+			this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(50)))), ((int)(((byte)(50)))));
+			this.ClientSize = new System.Drawing.Size(367, 125);
+			this.Enabled = false;
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+			this.Name = "InfoShower";
+			this.ShowIcon = false;
+			this.ShowInTaskbar = false;
+			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+			this.Text = "InfoShower";
 			this.ResumeLayout(false);
 
 		}

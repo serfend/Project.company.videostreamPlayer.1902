@@ -153,7 +153,7 @@ namespace EasyPlayerPro
 
 		// EasyPlayerPro接口函数声明
 		//
-		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Authorize", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Authorize", CallingConvention = CallingConvention.Cdecl )]
 		public static extern int Authorize(string license);
 
 		//初始化创建播放器实例(该接口可多次调用创建多个实例)
@@ -175,7 +175,7 @@ namespace EasyPlayerPro
 		//		speed				- 播放速度，0-100慢放，100以上快放
 		//		valume				- 播放音量，-255 - +255
 		// 		返回值				- Easy_PlayerPro_Handle 指针类型，指向 easyplayerpro 对象句柄
-		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Open", CallingConvention = CallingConvention.Cdecl,CharSet =CharSet.Unicode)]
+		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Open", CallingConvention = CallingConvention.Cdecl)]
 		public static extern IntPtr Open(IntPtr player, string file, IntPtr hwnd, EASY_VIDEO_RENDER_TYPE render_type, EASY_VIDEO_SCALE_MODE video_mode, EASY_STREAM_LINK_MODE link_mode, int speed, int valume);
 
 		//关闭视频
@@ -225,14 +225,14 @@ namespace EasyPlayerPro
 		// 		filePath			- 图片存放路径，以.xxx结束（xxx 目前只支持 jpeg 格式）
 		// 		width, height       - 指定图片宽高，如果 <= 0 则默认使用视频宽高
 		// 		waittime			- 是否等待截图完成 0 - 不等待，>0 等待超时 ms 为单位
-		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Snapshot", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Snapshot", CallingConvention = CallingConvention.Cdecl )]
 		public static extern int Snapshot(IntPtr player, string file, int w, int h, int wait);
 
 		// 	EasyPlayerPro_Record   视频播放录像
 		// 		player				- 指向 Open 返回的 player 对象
 		// 		filePath			- 图片存放路径，以.xxx结束（xxx 目前只支持 mp4 格式）
 		// 		duration			- 指定图片宽高，如果 <= 0 则默认使用视频宽高
-		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Record", CallingConvention = CallingConvention.Cdecl, CharSet = CharSet.Unicode)]
+		[DllImport("libEasyplayerpro.dll", EntryPoint = "EasyPlayerPro_Record", CallingConvention = CallingConvention.Cdecl  )]
 		public static extern int Record(IntPtr player, string filePath, int duration);
 
 		// 	EasyPlayerPro_Stoprecord   视频播放停止录像
